@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eskilaum - The Squirrel Snake Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #1a202c;
+        color: #e2e8f0;
+        overflow: hidden; /* Prevent scrollbars */
+      }
+      /* Custom animations for the start screen */
+      @keyframes run-bob {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+      .animate-bob {
+        animation: run-bob 0.4s ease-in-out infinite;
+      }
+      @keyframes run-chase {
+        0% { transform: translateX(-150%); }
+        45% { transform: translateX(150%); }
+        46%, 100% { opacity: 0; }
+      }
+       @keyframes roll-chase {
+        0% { transform: translateX(-120%) rotate(0deg); }
+        45% { transform: translateX(180%) rotate(2160deg); }
+        46%, 100% { opacity: 0; }
+      }
+      .animate-run-chase {
+        animation: run-chase 8s linear infinite;
+      }
+      .animate-roll-chase {
+         animation: roll-chase 8s linear infinite;
+      }
+       @keyframes return-with-prize {
+        0%, 49% { opacity: 0; }
+        50% { transform: translateX(150%) scaleX(-1); opacity: 0; }
+        55% { opacity: 1; }
+        95% { transform: translateX(-150%) scaleX(-1); }
+        100% { opacity: 0; }
+      }
+       .animate-return-with-prize {
+        animation: return-with-prize 8s linear infinite;
+        animation-delay: 4s; /* Corresponds to the second half of the main animation */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
