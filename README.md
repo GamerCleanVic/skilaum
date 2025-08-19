@@ -2,9 +2,6 @@
 
 > ## Platform Game
 > ```javascript
->  console.log(" 
+>  console.log("Link para comprar/buy: "); 
 > ```
-[Link to buy](https://inijs.itch.io/skilaum 'Skilaum Game')
-> ```javascript
- ");
-> ```
+[Link to buy/comprar game](https://inijs.itch.io/skilaum 'Skilaum Game')
