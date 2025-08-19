@@ -1,6 +1,6 @@
 # skilaum
 
-> ## Platform Game
+> ## Platform Game - Made in I.A. 100%
 > ```javascript
 >  console.log("Link para comprar/buy: "); 
 > ```
